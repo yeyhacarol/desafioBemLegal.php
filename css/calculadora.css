@@ -1,0 +1,51 @@
+.conteiner {
+    height: calc(98vh - 100px);
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora {
+    width: 50vw;
+
+    background-color: #EFEFEF;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo {
+    width: 50vw;
+    height: 80px;
+
+    background-color: #CCCCDD;
+
+    padding-top: 26px;
+
+    text-align: center;
+}
+
+.valor1, .valor2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    gap: 15px;
+    align-items: center;
+}
+
+.opcoes {
+    display: flex;
+
+    padding: 50px;
+    gap: 15px;
+}
+
+#resultado {
+    padding: 40px;
+}

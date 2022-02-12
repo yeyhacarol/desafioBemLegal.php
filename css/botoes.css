@@ -1,0 +1,37 @@
+input[type="text"] {
+    height: 30px;
+
+    font-size: 1.2rem;
+
+    border: none;
+
+    background-color: #C4C4C4;
+}
+
+.botoes {
+    display: flex;
+
+    gap: 70px;
+}
+
+.calcular, .novoCalculo {
+    width: auto;
+    height: 40px;
+
+    font-size: 1.2rem;
+
+    border: none;
+    background-color: #C4C4C4;
+}
+
+.novoCalculo {
+    text-align: center;
+
+    padding-top: 5px;
+}
+
+.novoCalculo > a {
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+}
