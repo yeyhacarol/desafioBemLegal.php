@@ -1,7 +1,7 @@
-.conteiner {
+form {
     height: calc(98vh - 100px);
 
-    background-color: white;
+    background-color: tomato;
 
     display: flex;
     justify-content: center;
