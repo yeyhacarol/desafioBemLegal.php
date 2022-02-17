@@ -9,6 +9,7 @@ header {
     justify-content: space-between;
 
     background-color: #E0DBF4;
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
 }
 
 img {

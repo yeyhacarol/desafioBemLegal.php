@@ -39,12 +39,12 @@ if (isset($_POST['btnCalcular'])) {
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/imPar.css">
-    <link rel="stylesheet" type="text/css" href="./css/botoes.css">
-    <title>Pares e ímpares</title>
+    <title>Ímpares e pares</title>
 </head>
 
 <body>
@@ -58,54 +58,56 @@ if (isset($_POST['btnCalcular'])) {
         </ul>
     </header>
 
-    <form name="frmImPar" method="post" action="imPar.php">
-        <div class="conteiner">
-            <div class="imPares">
-                <div class="titulo">Ímpares e pares</div>
-                <div class="valores">
-                    <div class="inicial">
-                        <p>N° inicial:</p>
-                        <select name="sltInicial">
-                            <option value="">Selecione um número</option>
-                            <?php echo ($sltInicial) ?>
-                        </select>
-                    </div>
-                    <div class="final">
-                        <p>N° final:</p>
-                        <select name="sltFinal">
-                            <option value="">Selecione um número</option>
-                            <?php echo ($sltFinal) ?>
-                        </select>
-                    </div>
-                    <div class="botao">
+    <div class="conteudo">
+        <div class="titulo">
+            <p>Ímpares e pares</p>
+        </div>
+
+        <div id="form">
+            <form name="frmImPar" method="POST" action="imPar.php">
+                <div class="container">
+                    <div class="interativo">
+                        <div class="selects">
+                            <div class="inicial">N° inicial:
+                                <select name="sltInicial">
+                                    <option value="">Selecione um número</option>
+                                    <?php echo ($sltInicial) ?>
+                                </select>
+                            </div>
+                            <div class="final">N° final:
+                                <select name="sltFinal">
+                                    <option value="">Selecione um número</option>
+                                    <?php echo($sltFinal) ?>
+                                </select>
+                            </div>
+                        </div>
                         <input class="calcular" type="submit" name="btnCalcular" value="Calcular">
                     </div>
-                    <div class="qtde">
-                        <p>Qtde. pares <?= count($arr) != 0 ? count($arr['Pares']) : null ?></p>
-                        <p>Qtde. impares <?= count($arr) != 0 ? count($arr['Impares']) : null ?> </p>
-                    </div>
-                </div>
-                <div id="resultados">
-                    <div class="pares">
-                        <p>Pares</p>
-                        <div class="num">
-                            <span>
-                                <?= count($arr) != 0 ? imprimirNumeros($arr['Pares']) : null ?>
-                            </span>
+
+                    <div class="resultados">
+                        <div id="par">
+                            <div class="par">Par</div>
+                            <div class="numeros">
+                                <span><?= count($arr) != 0 ? imprimirNumeros($arr['Pares']) : null ?></span>
+                            </div>
+                            <p>Qtde. de pares: <?= count($arr) != 0 ? count($arr['Pares']) : null ?></p>
                         </div>
-                    </div>
-                    <div class="impares">
-                        <p>Ímpares</p>
-                        <div class="num">
-                            <span>
-                                <?= count($arr) != 0 ? imprimirNumeros($arr['Impares']) : null ?>
-                            </span>
+                        <div id="impar">
+                            <div class="impar">Ímpar</div>
+                            <div class="numeros">
+                                <span><?= count($arr) != 0 ? imprimirNumeros($arr['Impares']) : null ?></span>
+                            </div>
+                            <p>Qtde. de ímpares: <?= count($arr) != 0 ? count($arr['Impares']) : null ?></p>
                         </div>
                     </div>
                 </div>
-            </div>
+
+            </form>
+
         </div>
-    </form>
+
+    </div>
+
 
 </body>
 

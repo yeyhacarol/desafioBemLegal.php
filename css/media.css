@@ -1,3 +1,7 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .conteiner {
     height: calc(98vh - 100px);
 
@@ -26,9 +30,10 @@
 
     background-color: #CCCCDD;
 
-    padding-top: 26px;
+    font-size: 1.7rem;
 
     text-align: center;
+    line-height: 80px;
 }
 
 .notas {
@@ -37,8 +42,10 @@
     margin-top: 45px;
     gap: 25px;
     align-items: center;
+    font-size: 1.4rem;
 }
 
 #resultado {  
     padding: 40px;
+    font-size: 1.4rem;
 }

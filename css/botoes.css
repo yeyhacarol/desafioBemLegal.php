@@ -15,23 +15,19 @@ input[type="text"] {
 }
 
 .calcular, .novoCalculo {
-    width: auto;
+    width: 8vw;
     height: 40px;
 
     font-size: 1.2rem;
-
-    border: none;
-    background-color: #C4C4C4;
-}
-
-.novoCalculo {
+    line-height: 40px;
     text-align: center;
 
-    padding-top: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #C4C4C4;
 }
 
 .novoCalculo > a {
     color: #000;
     text-decoration: none;
-    text-align: center;
 }
