@@ -1,19 +1,24 @@
-<!-- Objetivo: tela para realizar a tabuada; autora: Carolina Silva; data de criação: 09/02/2002 -->
+<!-- Objetivo: tela para realizar a tabuada; autora: Carolina Silva; data de criação: 09/02/2002
+Modificado: 17/02/2022(documentação) -->
 
 <?php
 
+//importação dos arquivos responsáveis por realizar o cálculo e de validação
 require_once('modulos/config.php');
 require_once('modulos/calculos.php');
 
+//declaração das variáveis 
 $multiplicando = (int) 0;
 $multiplicador = (int) 0;
 $resultado = (int) 0;
-$i = (int) 0;
 
+//verificando se o botão foi clicado
 if (isset($_POST['btnCalcular'])) {
+    //armazenando valores das caixas de texto nas variáveis
     $multiplicador = $_POST['txtMultiplicador'];
     $multiplicando = $_POST['txtMultiplicando'];
 
+    //verificações cujas mensagens de erro estão no arquivo config.php
     if ($_POST['txtMultiplicador'] == "" || $_POST['txtMultiplicando'] == "") {
         echo (ERRO_MSG_CAIXA_VAZIA);
     } elseif (!is_numeric($multiplicador) || !is_numeric($multiplicando)) {

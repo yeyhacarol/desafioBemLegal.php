@@ -1,24 +1,29 @@
 <!-- Objetivo: tela para calcular a média; autora: Carolina Silva; data de criação: 06/02/2022.
-Modificado: 07/02/2022-->
+Modificado: 07/02/2022; modificado em 17/02/2022(refatoração html, documentação)-->
 
 <?php
 
+//importação dos arquivos que armazenam as mensagens de erro e os cálculos
 require_once('modulos/config.php');
 require_once('modulos/calculos.php');
 
+//declaração das variáveis. Inicializadas para que não haja erro de variável indefinida
 $nota1 = (float) 0;
 $nota2 = (float) 0;
 $nota3 = (float) 0;
 $nota4 = (float) 0;
 $resultado = (float) 0;
 
+//verificando se o botão foi acionado
 if (isset($_POST['btnCalcular'])) {
 
+    //armazenando valores das caixas de texto nas variáveis
     $nota1 = $_POST['txtNota1'];
     $nota2 = $_POST['txtNota2'];
     $nota3 = $_POST['txtNota3'];
     $nota4 = $_POST['txtNota4'];
 
+    //validando e armazenando mensagens em caso de erros
     if ($_POST['txtNota1'] == "" || $_POST['txtNota2'] == "" || $_POST['txtNota3'] == "" || $_POST['txtNota4'] == "") {
         echo (ERRO_MSG_CAIXA_VAZIA);
     } else if (!is_numeric($nota1) || !is_numeric($nota2) || !is_numeric($nota3) || !is_numeric($nota4)) {
